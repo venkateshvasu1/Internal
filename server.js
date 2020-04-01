@@ -19,7 +19,8 @@ app.use(bodyParser.json());
 const mockEvents = {
     events: [
         { title: 'an event', id: 1, description: 'something really cool' },
-        { title: 'another event', id: 2, description: 'something even cooler' }
+        { title: 'another event', id: 2, description: 'something even cooler' },
+        { title: 'another event', id: 3, description: 'something even cooler' }
     ]
 };
 
@@ -51,6 +52,7 @@ app.post('/event', (req, res) => {
     const ev = { 
         title: req.body.title, 
         description: req.body.description,
+        location: req.body.location,
         id : mockEvents.events.length + 1
      }
     // add to the mock array
