@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: demo-api
-        image: gcr.io/roidtc-0330-attendee125/internal-image:v5.0.0
+        image: gcr.io/roidtc-0330-attendee125/internal-image:v6.0.0
         env:
         - name: GOOGLE_CLOUD_PROJECT
           value: roidtc-0330-attendee125
