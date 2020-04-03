@@ -26,9 +26,9 @@ const firestore = new Firestore(
 
 const mockEvents = {
     events: [
-        { title: 'an event', id: 1, description: 'something really cool', location:'Bangalore' },
-        { title: 'another event', id: 2, description: 'something even cooler' },
-        { title: 'another event', id: 3, description: 'something even cooler' }
+        { title: '', id: 1, description: '' },
+        { title: '', id: 2, description: '' },
+        { title: '', id: 3, description: '' }
     ]
 };
 
@@ -84,6 +84,7 @@ app.post('/event', (req, res) => {
         location: req.body.location,
         id : mockEvents.events.length + 1
      }
+    
     firestore.collection("Events").add(ev).then(ret => {
         getEvents(req, res);
     });
